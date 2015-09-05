@@ -1,0 +1,44 @@
+<div class="container-fluid">
+    <div class="row container-contact">
+
+            <div class="col-md-2 well">
+              <h3>Listing Users</h3>
+               <!--<button class="btn btn-primary" type="submit">Add User</button>-->
+                <%= link_to 'New User', new_user_path, :class=>"btn btn-primary", :role=>"button" %>
+            </div>
+            
+            <div class="col-md-6">
+          
+              <div class="well white user-block">
+                <ul class="contacts">
+                    <li>
+                      <span class="span-user text-info"><h4>Username</h4></span>
+                      <span class="span-password text-info"><h4>Password</h4></span>
+                      <span class="span-tombol text-info"><h4>Command</h4></span>
+                    </li>
+                    <% @users.each do |user| %>
+                      <li>
+                          <span class="span-user text-info"><strong><%= user.username %></strong></span>
+                          <span class="span-password text-info"><strong><%= user.password %></strong></span>
+                          <span class="span-tombol text-info">
+                            <% #link_to 'Show', user, :class=>"btn btn-default btn-sm", :role=>"button" %>
+                            <%= link_to 'Edit', edit_user_path(user), :class=>"btn btn-default btn-sm", :role=>"button" %>
+                            <%= link_to 'Delete', user, method: :delete, data: { confirm: 'Are you sure?' }, :class=>"btn btn-default btn-sm", :role=>"button" %>
+                          </span>
+                      </li>
+                    <% end %>
+                </ul>
+              </div>
+            </div>
+
+  </div>
+</div>
+
+
+
+
+  
+  
+  
+
+
