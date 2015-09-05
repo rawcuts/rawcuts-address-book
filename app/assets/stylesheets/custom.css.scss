@@ -3,6 +3,7 @@
 
 /* mixins, variables, etc. */
 
+
 $gray-medium-light: #eaeaea;
 
 @mixin box_sizing {
@@ -57,7 +58,6 @@ p {
   font-size: 1.1em;
   line-height: 1.7em;
 }
-
 
 /* header */
 
@@ -192,7 +192,6 @@ input {
   }
 }
 .footer {
-  position: absolute;
   bottom: 0;
   width: 100%;
   /* Set the fixed height of the footer here */
@@ -202,4 +201,29 @@ input {
 .vertical-center {
   margin-top:150px;
   align-items: center;
+}
+.container-contact {
+    margin-top:40px;
+}
+.white {
+  background-color:#fff;
+}
+/* Users index */
+
+.contacts {
+  list-style: none;
+  margin: 0;
+  li {
+    overflow: auto;
+    padding: 10px 0;
+    border-bottom: 1px solid $gray-lighter;
+  }
+}
+.contact-block{
+  min-height: 500px;
+  margin-bottom: 100px;
+}
+.alpha-btn{
+  list-style: none;
+  margin: 0;
 }
