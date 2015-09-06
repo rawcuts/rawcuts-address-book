@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
+  has_many :addres , dependent: :destroy
   before_save   :downcase_username, :downcase_password
   validates :username,  presence: true, length: { maximum: 20 }
   validates :password,  presence: true, length: { maximum: 20 }

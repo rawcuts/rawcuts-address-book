@@ -1,0 +1,16 @@
+<div class="well">
+      <%# form_for(:address, url: address_path, remote: true) do |f| %>
+       <%= form_for(:address, url: address_path) do |f| %>
+        <%= f.text_field :name, class: 'form-control', :placeholder => "name (required)", "required"=>"true"  %>
+        <%= f.text_field :email, class: 'form-control', :placeholder => "email (required)", "required"=>"true" %>
+        <%= f.text_field :business_phone, class: 'form-control', :placeholder => "business phone (required)", "required"=>"true" %>
+        <%= f.text_field :home_phone, class: 'form-control', :placeholder => "home phone" %>
+        <%= f.text_area :business_address, class: 'form-control', :placeholder => "business address" %>
+        <%= f.text_area :home_address, class: 'form-control', :placeholder => "home address" %>
+        <%= f.text_area :notes, class: 'form-control', :placeholder => "notes" %>
+        <%= f.hidden_field :user_id, class: 'form-control', value: @user_id %>
+      
+  
+        <%= f.submit "save", class: "btn btn-primary" %>
+      <% end %>
+</div>

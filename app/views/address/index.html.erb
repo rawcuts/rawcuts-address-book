@@ -1,0 +1,37 @@
+
+  <div class="container-fluid">
+
+    <div class="row container-contact">
+      <div class="col-md-2 well" id="add-contact">
+        <h3>My Contact</h3>
+            <% # link_to "Add Contact", address_path, class: "btn btn-primary", "data-toggle"=>"modal" %>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Add Contact</button>
+      </div>
+      
+      <div class="col-md-6">
+        
+        <%= render 'search' %>
+        <%= render 'order' %>
+
+        <div class="well white contact-block">
+          <ul class="contacts">
+               <li>
+                 Alexander Otsuka
+               </li>
+               
+                <li>
+                 Anita Yung
+               </li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="col-md-4 well">
+        <h3>Contact Preview</h3>
+      </div>
+    </div>
+  </div>
+  
+  
+  <%= render 'dialog' %>
+

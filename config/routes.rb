@@ -4,7 +4,8 @@ Rails.application.routes.draw do
 
   root 'static_pages#home'
   get 'static_pages/home'
-  get 'address' => 'address_book#index'
+  get 'address' => 'address#index'
+  post 'address' => 'address#create'
   post 'login'   => 'session#create'
   get 'logout' => 'session#destroy'
 
