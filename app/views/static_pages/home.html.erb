@@ -1,12 +1,18 @@
 <div class="center vertical-center">
   <h3>Welcome ;)</h3>
-  
+  <br/>
+  <% if notice %>
+          <div id="notice" class="alert alert-danger">
+            <strong></strong>Warning!</strong> <%= notice %>
+          </div>
+  <% end %>
+  <br/>
   <div class="row">
     <div class="col-md-6 col-md-offset-3">
       <div class="well">
-      <%= form_for(:session, url: root_path) do |f| %>
+      <%= form_for(:session, url: login_path) do |f| %>
 
-        <%= f.email_field :email, class: 'form-control', :placeholder => "email" %>
+        <%= f.text_field :username, class: 'form-control', :placeholder => "username" %>
 
         <%= f.password_field :password, class: 'form-control', :placeholder => "password" %>
       

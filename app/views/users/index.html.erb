@@ -14,13 +14,13 @@
                     <li>
                       <span class="span-user text-info"><h4>Username</h4></span>
                       <span class="span-password text-info"><h4>Password</h4></span>
-                      <span class="span-tombol text-info"><h4>Command</h4></span>
+                      <span class="span-tombol text-info" style="margin-left:25px;"><h4>Command</h4></span>
                     </li>
                     <% @users.each do |user| %>
                       <li>
                           <span class="span-user text-info"><strong><%= user.username %></strong></span>
-                          <span class="span-password text-info"><strong><%= user.password %></strong></span>
-                          <span class="span-tombol text-info">
+                          <span class="span-password text-info" style="overflow:hidden"><strong><%= user.password_digest %></strong></span>
+                          <span class="span-tombol text-info" style="margin-left:25px;">
                             <% #link_to 'Show', user, :class=>"btn btn-default btn-sm", :role=>"button" %>
                             <%= link_to 'Edit', edit_user_path(user), :class=>"btn btn-default btn-sm", :role=>"button" %>
                             <%= link_to 'Delete', user, method: :delete, data: { confirm: 'Are you sure?' }, :class=>"btn btn-default btn-sm", :role=>"button" %>

@@ -2,6 +2,7 @@ class User < ActiveRecord::Base
   before_save   :downcase_username, :downcase_password
   validates :username,  presence: true, length: { maximum: 20 }
   validates :password,  presence: true, length: { maximum: 20 }
+  has_secure_password
   
   private
   

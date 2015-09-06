@@ -3,9 +3,13 @@
     <%= link_to "Address Book", root_path, id: "logo" %>
     <nav>
       <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to "Home",    address_path %></strong></li>
-        <li><%= link_to "User",    users_path %></strong></li>
-        <li><%= link_to "Address",    address_path %></strong></li>
+        <li><%= link_to "Home",    root_path %></strong></li>
+        <% if logged_in? %>
+          <li><%= link_to "Address",    address_path %></strong></li>
+          <li><%= link_to "User",    users_path %></strong></li>
+          <li><%= link_to "Logout",    logout_path %></strong></li>
+          <%= p logged_in? %>
+        <% end %>
       </ul>
     </nav>
   </div>
